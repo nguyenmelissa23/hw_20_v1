@@ -1,18 +1,27 @@
 Import Local Repo to Git Remote
 
 (T) - in terminal
+<br>
 (G) - on github
-
+<br>
 (T) create-react-app hw_20_v1
+<br>
 (T) cd hw_20_v1
+<br>
 (T) git init
+<br>
 (T) git add .
+<br>
 (T) git commit -m "First commit"
+<br>
+(G) Create remote repo and copy link.
+<br>
 (T) git remote add origin https://github.com/nguyenmelissa23/hw_20_v2.git
+<br>
 (T) git remote -v
 origin	https://github.com/nguyenmelissa23/hw_20_v2.git (fetch)
 origin	https://github.com/nguyenmelissa23/hw_20_v2.git (push)
-
+<br>
 (T) git push -u origin master
 To https://github.com/nguyenmelissa23/hw_20_v2.git
  ! [rejected]        master -> master (fetch first)
@@ -25,7 +34,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Melissas-MBP:hw_20_v1 melissanguyen$ git push -u  master origin/master
 error: src refspec origin/master does not match any.
 error: failed to push some refs to 'master'
-
+<br>
 (T) git fetch origin
 warning: no common commits
 remote: Counting objects: 3, done.
@@ -33,22 +42,41 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From https://github.com/nguyenmelissa23/hw_20_v2
  * [new branch]      master     -> origin/master
-
+<br>
 (T) git pull origin master
+<br>
 (T) git merge origin/master master
 fatal: refusing to merge unrelated histories
-
+<br>
 (T) git merge origin/master master --allow-unrelated-histories
 Auto-merging README.md
 CONFLICT (add/add): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
+<br>
+(T) git pull origin master
+From https://github.com/nguyenmelissa23/hw_20_v2
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+<br>
+(T) git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
 
-(T) 
+    git push --set-upstream origin master
+<br>
+(T) git push --set-upstream origin master
+Counting objects: 20, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 40.19 KiB | 0 bytes/s, done.
+Total 20 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/nguyenmelissa23/hw_20_v2.git
+   4c45dd2..7ec7d6a  master -> master
+Branch master set up to track remote branch master from origin.
 
-
-
-
-
+<br>
+--------------------------***-----------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
