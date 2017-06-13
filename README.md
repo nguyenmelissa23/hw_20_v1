@@ -1,4 +1,54 @@
-<<<<<<< HEAD
+Import Local Repo to Git Remote
+
+(T) - in terminal
+(G) - on github
+
+(T) create-react-app hw_20_v1
+(T) cd hw_20_v1
+(T) git init
+(T) git add .
+(T) git commit -m "First commit"
+(T) git remote add origin https://github.com/nguyenmelissa23/hw_20_v2.git
+(T) git remote -v
+origin	https://github.com/nguyenmelissa23/hw_20_v2.git (fetch)
+origin	https://github.com/nguyenmelissa23/hw_20_v2.git (push)
+
+(T) git push -u origin master
+To https://github.com/nguyenmelissa23/hw_20_v2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/nguyenmelissa23/hw_20_v2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Melissas-MBP:hw_20_v1 melissanguyen$ git push -u  master origin/master
+error: src refspec origin/master does not match any.
+error: failed to push some refs to 'master'
+
+(T) git fetch origin
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/nguyenmelissa23/hw_20_v2
+ * [new branch]      master     -> origin/master
+
+(T) git pull origin master
+(T) git merge origin/master master
+fatal: refusing to merge unrelated histories
+
+(T) git merge origin/master master --allow-unrelated-histories
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+(T) 
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1902,4 +1952,4 @@ This will only work for locales that have been explicitly imported before.
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
 =======
 # hw_20_v2
->>>>>>> origin/master
+
