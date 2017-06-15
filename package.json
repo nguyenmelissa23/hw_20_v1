@@ -34,10 +34,11 @@
 	"webpack": "^2.2.0"
   },
   "scripts": {
-    "start": "npm run build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "webpack -w"
+	// ,
+    // "build": "react-scripts build",
+    // "test": "react-scripts test --env=jsdom",
+    // "eject": "react-scripts eject"
   }
 }
 

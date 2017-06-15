@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 app.use("/", routes);
 
-var db = process.env.MONGODB_URI || "mongodb://heroku_vl67h1hh:67841a2ns9cpcj8i4eck0uhvdr@ds163020.mlab.com:63020/heroku_vl67h1hh";
+var db = process.env.MONGODB_URI || "mongodb://heroku_m8s8zkwc:6j47ti2udtva6h5ldq7910rkhv@ds127962.mlab.com:27962/ heroku_m8s8zkwc";
 
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {
