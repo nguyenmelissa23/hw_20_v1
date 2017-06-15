@@ -38,22 +38,6 @@ class Favorite extends Component {
 		}.bind(this));
 	}
 
-	// handleDelete(quoteObj) {
-	// 	console.log("handleDelete:", quoteObj);
-	// 	API.deleteQuote(quoteObj._id).then(function () {
-	// 		console.log("deleted", quoteObj);
-	// 		API.getQuotes().then(function (allQuotes) {
-	// 			console.log("handleDelete quotes:", allQuotes.data);
-	// 			if (allQuotes.data !== []) {
-	// 				this.setState({
-	// 					savedQuotes: allQuotes.data
-	// 				});
-	// 			}
-	// 			console.log('handleDelete state:', this.state.savedQuotes);
-	// 		}.bind(this));
-	// 	}.bind(this));
-	// }
-
 	componentDidMount() {
 		API.getQuotes().then(function (allQuotes) {
 			console.log("all saved quotes:", allQuotes.data);
@@ -89,9 +73,9 @@ class Favorite extends Component {
 			var thisFavQuotes = this.state.favoriteQuote;
 			return thisFavQuotes.map(function (quoteObj, index) {
 				return (
-					<div key={index}>
-						<p>{quoteObj.text}</p>
-						<Button icon primary iconClassName="fa fa-star-o" onClick={this.handleUnFavorite.bind(this, quoteObj)} />
+					<div className="" key={index}>
+						<h4>{quoteObj.text}</h4>
+						<Button icon primary iconClassName="fa fa-star" onClick={this.handleUnFavorite.bind(this, quoteObj)} />
 					</div>
 				)
 			}.bind(this));
@@ -101,8 +85,13 @@ class Favorite extends Component {
 	renderSaved() {
 		if (this.state.favoriteQuote !== []) {
 			return (
-				<div className="container">
-					{this.renderQuotes()}
+				<div className="container panel panel-default">
+					<div className="panel-header">
+						<h2 className="text-center">Favorite</h2>
+					</div>
+					<div className="panel-body">
+						{this.renderQuotes()}
+					</div>
 				</div>
 			)
 		}

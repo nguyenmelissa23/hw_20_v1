@@ -40,7 +40,16 @@ class Saved extends Component {
 		console.log("handleFavorite:", quoteObj);
 		API.favoriteQuote(quoteObj).then(function(){
 			console.log("favorited", quoteObj);
-		});
+			API.getQuotes().then(function (allQuotes) {
+				console.log("handleFavorite in Saved quotes:", allQuotes.data);
+				if (allQuotes.data !== []) {
+					this.setState({
+						savedQuotes: allQuotes.data
+					});
+				}
+				console.log('handleDelete state:', this.state.savedQuotes);
+			}.bind(this));
+		}.bind(this));
 	}
 
 	handleDelete(quoteObj){
@@ -71,13 +80,24 @@ class Saved extends Component {
 		if (this.state.savedQuotes !== []) {
 			var thisSavedQuotes = this.state.savedQuotes;
 			return thisSavedQuotes.map(function(quoteObj, index){
-				return (
-					<div key={index}>
-						<p>{quoteObj.text}</p>
-						<Button icon primary iconClassName="fa fa-star-o" onClick={this.handleFavorite.bind(this, quoteObj)}/> 
-						<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}/>
-					</div>
-				)
+				if (quoteObj.favorited){
+					return (
+						<div className="panel-body panel-default" key={index}>
+							<h4>{quoteObj.text}</h4>
+							<Button icon primary iconClassName="fa fa-star" onClick={this.handleFavorite.bind(this, quoteObj)} />
+							<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)} />
+						</div>
+					)
+				} else {
+					return (
+						<div className="panel-body panel-default" key={index}>
+							<h4>{quoteObj.text}</h4>
+							<Button icon primary iconClassName="fa fa-star-o" onClick={this.handleFavorite.bind(this, quoteObj)} />
+							<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)} />
+						</div>
+					)
+				}
+				
 			}.bind(this));
 		}
 	}
@@ -94,9 +114,27 @@ class Saved extends Component {
 
 	render(){
 		if (this.state.savedQuotes === []){
-			return this.renderEmpty();
+			return (
+				<div>
+					<div className="panel-header">
+						<h2 className="text-center panel-header">Saved Quotes</h2>
+					</div>
+					<div className="panel-body">
+						{this.renderEmpty()}
+					</div>
+				</div>
+			)
 		} else {
-			return this.renderSaved();
+			return (
+				<div>
+					<div className="panel-header">
+						<h2 className="text-center panel-header">Saved Quotes</h2>
+					</div>
+					<div className="panel-body">
+						{this.renderSaved()}
+					</div>
+				</div>
+			)
 		}
 		
 	}

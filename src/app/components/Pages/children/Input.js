@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+import Button from 'react-md/lib/Buttons/Button';
+
 import API from "../../../utils/API";
 
 // very basic component to get started
@@ -38,9 +40,16 @@ class Input extends Component {
 
 	render(){
 		return(
-			<div>
-				<input name="quoteInput" onInput={this.handleInput.bind(this)} type="text" value={this.state.quote}/>
-				<button type="button" onClick={this.handleSubmit.bind(this)}>Submit</button>
+			<div className="panel panel-default">
+				<div className="panel-header">
+					<h2 className="text-center">Input Quote</h2>
+				</div>
+				<div className="panel-body">
+					<form action="" className="">
+						<input className="text-center quote-input form-control" name="quoteInput" onInput={this.handleInput.bind(this)} type="text" value={this.state.quote} />
+						<Button className="text-center" iconClassName="fa fa-plus" onClick={this.handleSubmit.bind(this)}></Button>
+					</form>
+				</div>
 			</div>
 		)
 	}

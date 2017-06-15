@@ -2,7 +2,7 @@ import React, {Component} from "react";
 // import {Link} from "react-router";
 // very basic component to get started
 
-import '../../app.css'
+// import '../../app.css'
 
 import Navigation from "../components/Navigation";
 import Header from "../components/Header";

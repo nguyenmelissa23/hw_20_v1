@@ -37,12 +37,12 @@ class Add extends Component {
 	render(){
 		return (
 			<div className="container">
-				<div className="container">
-					<h3>Input Quote</h3>
+
+				<div className="panel panel-default">
 					<Input handleSubmit={this.handleSubmit.bind(this)} />
 				</div>
-				<div className="container">
-					<h3>Saved Quotes</h3>
+				
+				<div className="panel panel-default">
 					<Saved savedQuotes={this.state.savedQuotes}/>
 				</div>
 			</div>
