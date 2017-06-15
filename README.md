@@ -1,5 +1,10 @@
 Import Local Repo to Git Remote
 
+https://help.github.com/articles/pushing-to-a-remote/
+https://help.github.com/articles/dealing-with-non-fast-forward-errors/
+https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories
+
+
 (T) - in terminal
 <br>
 (G) - on github
