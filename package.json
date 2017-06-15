@@ -12,9 +12,9 @@
   "author": "melissa",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/nguyenmelissa23/HW_19/issues"
+		"url": "https://github.com/nguyenmelissa23/hw_20_v1/issues"
 	},
-	"homepage": "https://github.com/nguyenmelissa23/HW_19#readme",
+	"homepage": "https://github.com/nguyenmelissa23/hw_20_v1#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
 	"express": "^4.13.4",
