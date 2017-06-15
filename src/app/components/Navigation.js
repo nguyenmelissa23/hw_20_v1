@@ -14,7 +14,6 @@ class Navigation extends Component{
 						<ul className="nav navbar-nav navbar-right">
 							<li><Link to="/add">Create Quote</Link></li>
 							<li><Link to="/favorite">Favorite</Link></li>
-							{/*<li><Link to="/Saved">Saved</Link></li>*/}
 						</ul>
 					</div>
 				</div>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Button from 'react-md/lib/Buttons';
+
 import API from "../../../utils/API";
 
 // very basic component to get started
@@ -55,7 +57,6 @@ class Saved extends Component {
 				console.log('handleDelete state:', this.state.savedQuotes);
 			}.bind(this));
 		}.bind(this));
-		
 	}
 	
 	renderEmpty() {
@@ -72,9 +73,9 @@ class Saved extends Component {
 			return thisSavedQuotes.map(function(quoteObj, index){
 				return (
 					<div key={index}>
-						<h4>{quoteObj.text}</h4>
-						<button onClick={this.handleFavorite.bind(this, quoteObj)}>Star</button>
-						<button onClick={this.handleDelete.bind(this, quoteObj)}>Delete</button>
+						<p>{quoteObj.text}</p>
+						<Button icon primary iconClassName="fa fa-star-o" onClick={this.handleFavorite.bind(this, quoteObj)}/> 
+						<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}/>
 					</div>
 				)
 			}.bind(this));
