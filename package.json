@@ -34,7 +34,7 @@
 	"webpack": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack -w",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
