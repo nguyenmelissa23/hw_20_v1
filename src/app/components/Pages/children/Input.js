@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import Button from 'react-md/lib/Buttons/Button';
+import Button from 'react-md/lib/Buttons/Button.js';
 
 import API from "../../../utils/API";
 
@@ -46,8 +46,8 @@ class Input extends Component {
 				</div>
 				<div className="panel-body">
 					<form action="" className="">
-						<input className="text-center quote-input form-control" name="quoteInput" onInput={this.handleInput.bind(this)} type="text" value={this.state.quote} />
-						<Button className="text-center" iconClassName="fa fa-plus" onClick={this.handleSubmit.bind(this)}></Button>
+						<input className="quote-input form-control" name="quoteInput" onInput={this.handleInput.bind(this)} type="text" value={this.state.quote} />
+						<Button className="text-center" iconClassName="fa fa-plus" onClick={this.handleSubmit.bind(this)} />
 					</form>
 				</div>
 			</div>
