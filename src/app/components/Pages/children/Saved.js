@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Button from 'react-md/lib/Buttons';
+// import Button from 'react-md/lib/Buttons';
 
 import API from "../../../utils/API";
 
@@ -84,16 +84,16 @@ class Saved extends Component {
 					return (
 						<div className="panel-body panel-default" key={index}>
 							<h4>{quoteObj.text}</h4>
-							<Button icon primary iconClassName="fa fa-star" onClick={this.handleFavorite.bind(this, quoteObj)} />
-							<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)} />
+							<button icon primary iconClassName="fa fa-star" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
+							<button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}></button>
 						</div>
 					)
 				} else {
 					return (
 						<div className="panel-body panel-default" key={index}>
 							<h4>{quoteObj.text}</h4>
-							<Button icon primary iconClassName="fa fa-star-o" onClick={this.handleFavorite.bind(this, quoteObj)} />
-							<Button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)} />
+							<button icon primary iconClassName="fa fa-star-o" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
+							<button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}></button>
 						</div>
 					)
 				}

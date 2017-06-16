@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Button from 'react-md/lib/Buttons/Button';
+// import Button from 'react-md/lib/Buttons/Button';
 
 import API from "../../utils/API";
 
@@ -75,7 +75,7 @@ class Favorite extends Component {
 				return (
 					<div className="" key={index}>
 						<h4>{quoteObj.text}</h4>
-						<Button icon primary iconClassName="fa fa-star" onClick={this.handleUnFavorite.bind(this, quoteObj)} />
+						<button icon primary iconClassName="fa fa-star" onClick={this.handleUnFavorite.bind(this, quoteObj)}></button>
 					</div>
 				)
 			}.bind(this));
