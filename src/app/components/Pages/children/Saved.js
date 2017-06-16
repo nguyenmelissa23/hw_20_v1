@@ -84,16 +84,16 @@ class Saved extends Component {
 					return (
 						<div className="panel-body panel-default" key={index}>
 							<h4>{quoteObj.text}</h4>
-							<button className="glyphicon glyphicon-star-empty" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
-							<button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}></button>
+							<button className="glyphicon glyphicon-star" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
+							<button className="glyphicon glyphicon-trash" onClick={this.handleDelete.bind(this, quoteObj)}></button>
 						</div>
 					)
 				} else {
 					return (
 						<div className="panel-body panel-default" key={index}>
 							<h4>{quoteObj.text}</h4>
-							<button className="glyphicon glyphicon-star" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
-							<button icon primary iconClassName="fa fa-trash-o" onClick={this.handleDelete.bind(this, quoteObj)}></button>
+							<button className="glyphicon glyphicon-star-empty" onClick={this.handleFavorite.bind(this, quoteObj)}></button>
+							<button className="glyphicon glyphicon-trash" onClick={this.handleDelete.bind(this, quoteObj)}></button>
 						</div>
 					)
 				}
