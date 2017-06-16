@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Button from 'react-md/lib/Buttons';
+import Button from 'react-md/lib/Buttons/Button';
 
 import API from "../../utils/API";
 

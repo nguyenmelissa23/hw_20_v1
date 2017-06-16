@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router";
 
-import '../../app.css'
-
-
 class Navigation extends Component{
 	render(){
 		return (
