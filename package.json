@@ -32,10 +32,6 @@
 	"babel-preset-es2016":"^6.24.1",
 	"babel-preset-react": "^6.5.0",
 	"webpack": "^2.2.0"
-  },
-  "scripts": {
-    "start": "npm server.js",
-    "build": "webpack"
   }
 }
 
