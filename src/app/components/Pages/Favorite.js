@@ -75,7 +75,7 @@ class Favorite extends Component {
 				return (
 					<div className="" key={index}>
 						<h4>{quoteObj.text}</h4>
-						<button icon primary iconClassName="fa fa-star" onClick={this.handleUnFavorite.bind(this, quoteObj)}></button>
+						<button className="glyphicon glyphicon-star" onClick={this.handleUnFavorite.bind(this, quoteObj)}></button>
 					</div>
 				)
 			}.bind(this));
